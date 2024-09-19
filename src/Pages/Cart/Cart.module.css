@@ -1,10 +1,10 @@
-.conatiner {
+.container {
   display: flex;
   gap: 20px;
   justify-content: center;
   margin-top: 20px;
 }
-.conatiner img {
+.container img {
   width: 100px !important;
 }
 .cart__product {
@@ -44,7 +44,7 @@
 .subtotal {
   padding: 20px;
   min-width: 300px;
-  height: 80px;
+  height: 90px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -75,7 +75,7 @@
 }
 
 @media screen and (max-width: 968px) {
-  .conatiner {
+  .container {
     flex-direction: column;
     order: 1;
   }

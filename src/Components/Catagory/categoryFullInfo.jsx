@@ -2,7 +2,7 @@ export const categoryInfos=[
     {
         title:"Electronics",
         name:"electronics",
-        imgLink:"https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_TV_2X._SY304_CB432517900_.jpg",
+        imgLink:"https://5.imimg.com/data5/XL/RM/DB/SELLER-16425730/home-appliances-500x500.jpg",
     },{
         title:"Discover fashion trends",
         name:"women's clothing",

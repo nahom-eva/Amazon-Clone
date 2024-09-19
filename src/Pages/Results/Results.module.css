@@ -1,4 +1,4 @@
-.products_container {
+.products__container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   max-width: 1450px;
@@ -7,6 +7,6 @@
   justify-content: center;
 }
 
-.products_container section{
+.products__container section{
     margin: 0 auto;
 }

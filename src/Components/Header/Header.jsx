@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import classes from "./Header.module.css";
 import { Link } from "react-router-dom";
 import { IoSearch } from "react-icons/io5";
 import { SlLocationPin } from "react-icons/sl";
 import { BiCart } from "react-icons/bi";
 import LowerHeader from "./LowerHeader";
+import { DataContext } from "../DataProvider/DataProvider";
 
 function Header() {
+  const [{ basket }, dispatch] = useContext(DataContext);
+  console.log(basket.length);
+  const totalItem = basket?.reduce((amount, item) => {
+    return item.amount + amount;
+  }, 0);
   return (
-    <>
+    <section className={classes.fixed}>
       <section>
         <div className={classes.header__container}>
           {/* {logo} */}
@@ -24,7 +30,7 @@ function Header() {
                 <SlLocationPin />
               </span>
               <div>
-                <p>delivered to</p>
+                <p>Deliver to</p>
                 <span>Ethiopia</span>
               </div>
             </div>
@@ -35,38 +41,36 @@ function Header() {
               <option value="">All</option>
             </select>
             <input type="text" />
-            <IoSearch size={25} />
+            <IoSearch />
           </div>
-          <div>
-            {/* order section */}
-            <div className={classes.order__container}>
-              <Link to="" className={classes.language}>
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Flag_of_the_United_States.png/800px-Flag_of_the_United_States.png"
-                  alt=""
-                />
-                <select name="">
-                  <option value="">EN</option>
-                </select>
-              </Link>
-              <Link to="/auth">
-                <p>Sign In</p>
-                <span>Account & Lists</span>
-              </Link>
-              <Link to="/orders">
-                <p>Returns</p>
-                <span>& Orders</span>
-              </Link>
-              <Link to="/cart" className={classes.cart}>
-                <BiCart size={35} />
-                <span></span>
-              </Link>
-            </div>
+          {/* order section */}
+          <div className={classes.order__container}>
+            <Link to="" className={classes.language}>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Flag_of_the_United_States.png/800px-Flag_of_the_United_States.png"
+                alt=""
+              />
+              <select name="">
+                <option value="">EN</option>
+              </select>
+            </Link>
+            <Link to="/auth">
+              <p>Sign In</p>
+              <span>Account & Lists</span>
+            </Link>
+            <Link to="/orders">
+              <p>Returns</p>
+              <span>& Orders</span>
+            </Link>
+            <Link to="/cart" className={classes.cart}>
+              <BiCart size={35} />
+              <span>{totalItem}</span>
+            </Link>
           </div>
         </div>
         <LowerHeader />
       </section>
-    </>
+    </section>
   );
 }
 

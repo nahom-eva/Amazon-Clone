@@ -2,11 +2,15 @@
   padding: 0;
   margin: 0;
 }
-
 body {
   font-family: "Roboto", system-ui;
   font-weight: 400;
   font-style: normal;
+}
+.fixed {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 .header__container {
   background-color: #1a1a1a;
@@ -17,11 +21,12 @@ body {
   height: 70px;
   width: 100%;
 }
+
 .logo__container {
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 250px;
+  max-width: 230px;
 }
 
 .logo__container img {
@@ -42,6 +47,7 @@ body {
 
 .delivery p {
   font-size: 10px;
+  color: #d4d4d4;
 }
 
 .search {
@@ -59,9 +65,10 @@ body {
   font-weight: bold;
   outline: 1px solid white;
 }
+
 .search select {
   border: none;
-  background-color: #E6E6E6;
+  background-color: #e6e6e6;
 }
 .search input {
   border: 1px solid white;
@@ -69,15 +76,21 @@ body {
   margin-right: -2px;
 }
 .search svg {
-  padding: 7px;
+  padding: 11px;
   background: #febd69;
   color: #1a1a1a;
+  outline: 1px solid #febd69;
 }
+
 .search svg:hover {
   background-color: #d49644;
 }
+
 .search:focus-within {
   border: 2px solid rgb(235, 161, 173);
+}
+.search svg:hover {
+  cursor: pointer;
 }
 
 .order__container {
@@ -104,15 +117,17 @@ body {
   background-color: #1a1a1a;
   border: none;
   color: white;
+  font-weight: bold;
 }
 .language img {
-  width: 40%;
+  width: 25%;
 }
-.position {
+
+.cart {
   position: relative;
 }
 .cart span {
-  position: absolute;
+  position:absolute;
   font-weight: bold;
   top: 0px;
   font-size: 20px;
@@ -120,13 +135,12 @@ body {
   left: 16px;
   color: orange;
 }
-
 .order__container a:hover,
 .delivery:hover,
 .logo__container a:hover,
 .lower__container ul li:hover {
   border: 1px solid white;
-  border-radius: 3px;
+  border-radius: 1px;
   cursor: pointer;
 }
 
@@ -158,7 +172,7 @@ body {
   .lower__container ul li:not(:first-child) {
     display: none;
   }
-  .language { 
+  .language {
     display: none;
   }
 }

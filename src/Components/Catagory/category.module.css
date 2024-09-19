@@ -17,7 +17,7 @@
 }
 .category h2,
 .category p {
-  padding: 5px;
+  padding: 5px; 
   margin-left: 15px;
 }
 .category p {
@@ -26,9 +26,11 @@
   color: rgb(9, 132, 209);
 }
 .category__container {
-  position: relative;
+  position: relative; 
   margin-top: -10%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   place-items: center;
 }
+
+

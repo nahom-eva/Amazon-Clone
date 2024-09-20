@@ -50,3 +50,9 @@ export const reducer = (state, action) => {
       return state;
   }
 };
+
+// const [state, setState] =useState([])
+
+
+// const [state, dispatch] = useReducer(reducer, initialState)
+

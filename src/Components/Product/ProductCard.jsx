@@ -9,7 +9,10 @@ function ProductCard({ product, flex, renderDesc, renderAdd }) {
   const { image, title, id, rating, price, description } = product;
   console.log(product);
   const [state, dispatch] = useContext(DataContext);
-  // console.log(state);
+
+  // const [state, dispatch] = useReducer(reducer, initialState)
+  console.log(state);
+  
   const addToCart = () => {
     dispatch({
       type: Type.ADD_TO_BASKET,

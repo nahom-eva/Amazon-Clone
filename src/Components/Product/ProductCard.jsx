@@ -7,11 +7,11 @@ import { DataContext } from "../DataProvider/DataProvider";
 import { Type } from "../../Utility/action.type";
 function ProductCard({ product, flex, renderDesc, renderAdd }) {
   const { image, title, id, rating, price, description } = product;
-  console.log(product);
+  // console.log(product);
   const [state, dispatch] = useContext(DataContext);
 
   // const [state, dispatch] = useReducer(reducer, initialState)
-  console.log(state);
+  // console.log(state);
   
   const addToCart = () => {
     dispatch({
@@ -26,7 +26,7 @@ function ProductCard({ product, flex, renderDesc, renderAdd }) {
       },
     });
   };
-  console.log(product);
+  // console.log(product);
   return (
     <div
       className={`${classes.card__container} ${

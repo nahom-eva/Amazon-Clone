@@ -42,6 +42,7 @@
 .login__container form input:focus {
   outline: 2px solid skyblue;
 }
+
 .login__signInButton {
   border: none;
   background: #f0c14b;
